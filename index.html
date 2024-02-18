@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/bus-icon.png" type="image/x-icon" />
     <title>Starline bus online ticket counter</title>
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Daisyui cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -35,7 +43,7 @@
     </script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="raleway">
+  <body class="raleway scroll-smooth">
     <!-- header section starts here  -->
     <header class="container mx-auto">
       <!-- navbar starts here  -->
@@ -51,7 +59,7 @@
         </ul>
         <div>
           <button
-            class="flex gap-2 text-xl font-bold px-6 py-3 border border-green-500 rounded-xl bg-green-100 text-green-500"
+            class="flex gap-2 text-xl font-bold px-6 py-3 border border-green-500 rounded-xl bg-green-200 text-green-500"
           >
             Bus <img src="images/bus-icon.png" alt="" />
           </button>
@@ -74,11 +82,12 @@
           app. The integrated testing features allow for a streamlined .
         </p>
         <p>
-          <button
+          <a
+            href="#seat-section"
             class="text-black bg-green-500 text-xl font-bold px-7 py-4 rounded-lg"
           >
             Buy Tickets
-          </button>
+          </a>
         </p>
       </div>
 
@@ -140,20 +149,22 @@
     <!-- main section starts here  -->
     <main class="">
       <!-- Best offers for you section  -->
-      <section class="mt-24 container mx-auto">
+      <section class="mt-28 container mx-auto">
         <h1 class="font-bold text-4xl text-center">Best offers for you</h1>
 
         <div
           class="gap-7 mx-5 flex flex-col lg:flex-row justify-center items-center mt-12"
         >
           <div
-            class="flex justify-center items-center bg-yellow-500 rounded-xl w-full"
+            class="flex px-5 justify-center items-center bg-yellow-500 rounded-xl w-full"
           >
             <div>
               <div class="space-y-3">
-                <h2 class="text-4xl font-black inter text-black">15% OFF</h2>
+                <h2 class="text-3xl lg:text-4xl font-black inter text-black">
+                  15% OFF
+                </h2>
                 <p class="text-xl inter font-semibold">no your next purchase</p>
-                <p class="text-lg font-medium inter text-gray-500">
+                <p class="test-sm lg:text-lg font-medium inter text-gray-500">
                   use by january 2024
                 </p>
               </div>
@@ -169,17 +180,21 @@
             class="flex justify-center items-center bg-pink-400 rounded-xl w-full"
           >
             <div>
-              <div class="space-y-3">
-                <h2 class="text-4xl font-black inter text-black">20% OFF</h2>
+              <div class="space-y-3 px-5">
+                <h2 class="text-2xl lg:text-4xl font-black inter text-black">
+                  20% OFF
+                </h2>
                 <p class="text-xl inter font-semibold">on your next purchase</p>
-                <p class="text-lg font-medium inter text-gray-500">
-                  use by January 2024
+                <p class="test-sm lg:text-lg font-medium inter text-gray-500">
+                  use by January <br />2024
                 </p>
               </div>
             </div>
             <img src="images/cupon-devider.png" alt="" />
-            <div class="space-y-3">
-              <h2 class="text-3xl font-bold text-black">Couple 20</h2>
+            <div class="space-y-3 pr-2">
+              <h2 class="text-2xl lg:text-3xl font-bold text-black">
+                Couple&nbsp;20
+              </h2>
               <p class="text-lg font-medium inter text-gray-500">Coupon Code</p>
             </div>
           </div>
@@ -193,10 +208,491 @@
         </p>
       </section>
       <!-- Best offers for you section ends  -->
+
+      <section
+        id="seat-section"
+        class="bg-[#F7F8F8] mt-28 rounded-[88px] border-t-2 border-green-500"
+      >
+        <h1 class="font-bold text-4xl mt-24 text-center">Starline Paribahan</h1>
+        <p
+          class="inter text-lg text-gray-600 mt-5 text-center lg:w-[50%] mx-auto"
+        >
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+
+        <!-- ticket info section  -->
+        <div
+          class="container flex justify-between flex-col lg:flex-row mx-auto rounded-xl bg-white"
+        >
+          <div class="lg:w-[75%] p-7">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+              <div class="flex justify-between gap-5 items-center">
+                <img src="images/bus-logo.png" alt="" />
+                <div>
+                  <h2 class="font-bold text-2xl lg:text-3xl text-black">
+                    Starline Paribahan
+                  </h2>
+                  <p class="text-[15px] text-gray-500">
+                    Coach-009-WEB ! AC_Business
+                  </p>
+                </div>
+              </div>
+              <div class="flex inter my-8">
+                <button
+                  class="text-lg font-medium rounded-xl flex px-6 py-3 bg-green-200 text-green-500"
+                >
+                  <img src="images/seat-green.png" alt="" />
+                  &nbsp;<span id="totalSeat">40</span> &nbsp;Seats left
+                </button>
+              </div>
+            </div>
+            <div class="bg-[#F7F8F8] rounded-xl my-7 p-5">
+              <div class="flex justify-between items-center py-5">
+                <p class="text-lg font-semibold text-gray-400">Route</p>
+                <p class="text-lg font-semibold text-black">Dhaka - Sylhet</p>
+              </div>
+              <hr class="border-dashed border-gray-400" />
+
+              <div class="flex justify-between items-center py-5">
+                <p class="text-lg font-semibold text-gray-400">
+                  Departure Time
+                </p>
+                <p class="text-lg font-semibold inter text-black">9:00 PM</p>
+              </div>
+              <hr class="border-dashed border-gray-400" />
+
+              <div
+                class="flex flex-col lg:flex-row gap-5 justify-between items-center py-5"
+              >
+                <p
+                  class="text-lg font-medium min-w-64 text-center bg-[#0307120D] p-4 rounded-lg text-gray-600"
+                >
+                  Boarding Point - Laxmipur
+                </p>
+                <p
+                  class="text-lg font-medium min-w-64 text-center bg-[#0307120D] p-4 rounded-lg text-gray-600"
+                >
+                  Est. Time - 11 Hour
+                </p>
+                <p
+                  class="text-lg font-medium min-w-64 text-center bg-[#0307120D] p-4 rounded-lg text-gray-600"
+                >
+                  Est. Time - 11 Hour
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <img class="hidden lg:inline" src="images/info-devider.png" alt="" />
+          <hr
+            class="lg:hidden md:hidden border-dashed mb-6 border-b-2 mx-10 border-green-300"
+          />
+          <div
+            class="flex flex-col justify-center items-center gap-4 lg:w-[25%]"
+          >
+            <p>
+              <img
+                class="border-dashed border-4 border-gray-300"
+                src="images/fare.png"
+                alt=""
+              />
+            </p>
+
+            <h1 class="font-bold text-2xl inter lg:text-3xl text-black">
+              550 Taka
+            </h1>
+            <p class="text-2xl font-semibold text-gray-400">Per Seat</p>
+          </div>
+        </div>
+        <!-- ticket info section ends  -->
+
+        <!-- seat mange section starts  -->
+        <section
+          class="container flex flex-col lg:flex-row gap-5 mx-auto p-5 bg-white rounded-xl mt-24"
+        >
+          <div class="">
+            <h2 class="text-2xl font-semibold black">Select Your Seat</h2>
+            <hr class="border-dashed border-1 border-gray-400 my-5" />
+
+            <div class="flex justify-between items-center">
+              <p class="flex text-lg font-medium text-gray-400">
+                <img
+                  class="border-dashed border-2 border-gray-300"
+                  src="images/seat-gray.png"
+                  alt=""
+                />
+                &nbsp; Available
+              </p>
+              <p class="flex text-lg font-medium text-green-500">
+                <img
+                  class="border-dashed border-2 border-gray-300"
+                  src="images/seat-green-filled.png"
+                  alt=""
+                />
+                &nbsp; selected
+              </p>
+            </div>
+            <hr class="border-dashed border-1 border-gray-400 my-5" />
+            <div class="flex justify-end">
+              <p class="bg-gray-300 text-center px-7 lg:px-16 rounded-lg py-3">
+                <svg
+                  width="26.000000"
+                  height="26.000000"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <desc>Created with Pixso.</desc>
+                  <defs />
+                  <path
+                    id="Vector"
+                    d="M1.91333 17.5922C2.5166 19.0481 3.40039 20.371 4.51465 21.4853C5.62891 22.5996 6.9519 23.4835 8.40771 24.0865C9.86377 24.6896 11.4241 25 13 25C14.5759 25 16.1362 24.6896 17.5923 24.0865C19.0481 23.4835 20.3711 22.5996 21.4854 21.4853C22.5996 20.371 23.4834 19.0481 24.0867 17.5922C24.6897 16.1363 25 14.5759 25 13C25 11.4241 24.6897 9.86371 24.0867 8.40781C23.4834 6.9519 22.5996 5.62903 21.4854 4.51471C20.3711 3.40042 19.0481 2.51651 17.5923 1.91345C16.1362 1.31039 14.5759 1 13 1C11.4241 1 9.86377 1.31039 8.40771 1.91345C6.9519 2.51651 5.62891 3.40042 4.51465 4.51471C3.40039 5.62903 2.5166 6.9519 1.91333 8.40781C1.3103 9.86371 1 11.4241 1 13C1 14.5759 1.3103 16.1363 1.91333 17.5922ZM11.1145 14.8856C11.6145 15.3857 12.2927 15.6667 13 15.6667C13.7073 15.6667 14.3855 15.3857 14.8855 14.8856C15.3857 14.3855 15.6667 13.7072 15.6667 13C15.6667 12.2928 15.3857 11.6145 14.8855 11.1144C14.3855 10.6143 13.7073 10.3333 13 10.3333C12.2927 10.3333 11.6145 10.6143 11.1145 11.1144C10.6143 11.6145 10.3333 12.2928 10.3333 13C10.3333 13.7072 10.6143 14.3855 11.1145 14.8856ZM13 15.6667L13 25M10.3333 13L1.33325 10.3333M15.6667 13L24.6667 10.3333"
+                    stroke="#030712"
+                    stroke-opacity="0.700000"
+                    stroke-width="2.000000"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </p>
+            </div>
+
+            <div class="flex inter justify-between mt-5">
+              <div class="flex flex-col text-lg justify-between items-center">
+                <p class="text-center mr-3 py-3">A</p>
+                <p class="text-center mr-3 py-3">B</p>
+                <p class="text-center mr-3 py-3">C</p>
+                <p class="text-center mr-3 py-3">D</p>
+                <p class="text-center mr-3 py-3">E</p>
+                <p class="text-center mr-3 py-3">F</p>
+                <p class="text-center mr-3 py-3">G</p>
+                <p class="text-center mr-3 py-3">H</p>
+                <p class="text-center mr-3 py-3">I</p>
+                <p class="text-center mr-3 py-3">J</p>
+              </div>
+              <div
+                class="flex gap-4 md:gap-12 lg:gap-12 justify-center items-center"
+              >
+                <div class="flex gap-2 lg:gap-6 justify-center items-center">
+                  <div class="flex flex-col gap-2 lg:gap-5">
+                    <p
+                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
+                    >
+                      A1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      B1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      C1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      D1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      E1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      F1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      G1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      H1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      I1
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      J1
+                    </p>
+                  </div>
+
+                  <div class="flex flex-col gap-2 lg:gap-5">
+                    <p
+                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
+                    >
+                      A2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      B2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      C2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      D2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      E2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      F2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      G2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      H2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      I2
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      J2
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-2 lg:gap-5 justify-center items-center">
+                  <div class="flex flex-col gap-2 lg:gap-5">
+                    <p
+                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
+                    >
+                      A3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      B3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      C3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      D3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      E3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      F3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      G3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      H3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      I3
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      J3
+                    </p>
+                  </div>
+
+                  <div class="flex flex-col gap-2 lg:gap-5">
+                    <p
+                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
+                    >
+                      A4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      B4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      C4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      D4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      E4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      F4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      G4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      H4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      I4
+                    </p>
+                    <p
+                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
+                    >
+                      J4
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hidden lg:block border-dashed border-r-2 border-green-500"
+          ></div>
+
+          <div class="w-full">
+            <h2 class="text-2xl font-semibold black">Select Your Seat</h2>
+            <hr class="border-dashed border-1 border-gray-400 my-5" />
+            <div class="bg-[#F7F8F8] p-6 rounded-xl">
+              <div
+                class="text-lg inter font-semibold text-black flex justify-between items-center"
+              >
+                <p>
+                  Seat
+                  <span id="maxSeat" class="p-2 rounded-lg bg-green-500"
+                    >0</span
+                  >
+                </p>
+                <p>Class</p>
+                <p>Price</p>
+              </div>
+              <hr class="border-dashed border-1 border-gray-400 my-5" />
+              <div
+                class="text-lg text-gray-500 flex justify-between items-center"
+              ></div>
+              <hr class="border-1 border-gray-400 my-5" />
+              <div
+                class="text-lg font-semibold inter text-black flex justify-between items-center"
+              >
+                <p>Total Price</p>
+                <p>BDT <span id="total-price">0</span></p>
+              </div>
+              <div
+                class="text-lg inter bg-white flex justify-between items-center my-5 rounded-xl"
+              >
+                <input
+                  class="w-full h-full p-4"
+                  type="text"
+                  placeholder="Have any coupons?"
+                />
+                <button
+                  class="text-white bg-green-400 font-semibold text-lg px-4 py-2 rounded-lg m-4"
+                >
+                  Apply
+                </button>
+              </div>
+              <div
+                class="text-lg font-semibold inter text-black flex justify-between items-center"
+              >
+                <p>Grand Total</p>
+                <p>BDT <span> 0</span></p>
+              </div>
+            </div>
+            <div class="text-lg font-semibold inter text-black mt-7">
+              <p class="mb-5">Passenger Name*</p>
+
+              <input
+                class="w-full h-full border-1 border border-gray-400 rounded-lg p-5"
+                placeholder="Enter your name"
+                type="text"
+              />
+
+              <p class="mb-5 mt-5">Phone Number*</p>
+
+              <input
+                class="w-full h-full border-1 border border-gray-400 rounded-lg p-5"
+                placeholder="Enter your phone number"
+                type="number"
+                min="11"
+              />
+
+              <p class="mb-5 mt-5">Email ID</p>
+
+              <input
+                class="w-full h-full border-1 border border-gray-400 rounded-lg p-5"
+                placeholder="Enter your email id"
+                type="email"
+              />
+
+              <button
+                class="font-extrabold text-xl text-white w-full rounded-xl bg-green-500 p-5 my-5"
+              >
+                Next
+              </button>
+            </div>
+            <div
+              class="font-semibold text-gray-500 inter underline flex justify-around items-center"
+            >
+              <p><a href="">Terms and Conditions</a></p>
+              <p><a href="">Cancellation Policy</a></p>
+            </div>
+          </div>
+        </section>
+        <!-- seat mange section starts  -->
+      </section>
     </main>
     <!-- main section ends here  -->
     <!-- footer section starts here  -->
-    <footer>foter</footer>
+    <footer></footer>
     <!-- footer section ends here  -->
+    <script src="script.js"></script>
   </body>
 </html>
