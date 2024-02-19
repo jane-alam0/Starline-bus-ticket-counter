@@ -4,6 +4,7 @@ for (const btn of seatBookingBtn) {
   btn.addEventListener("click", seatBookingControl);
 }
 
+//coupon code apply
 const applyBtn = getElement("applyBtn");
 applyBtn.addEventListener("click", function (event) {
   const element = event.target.parentNode;
@@ -33,9 +34,12 @@ function completeBooking() {
   const numberInput = getElement("numberInput");
   numberInput.addEventListener("keyup", function (e) {
     const value = e.target.value;
-    if (value.length > 10) {
+    if (value.length === 11) {
       nextBtn.removeAttribute("disabled");
       nextBtn.style.backgroundColor = "rgb(74,222,128)";
+    } else {
+      nextBtn.setAttribute("disabled", true);
+      nextBtn.style.backgroundColor = " rgb(187 247 208)";
     }
   });
 }
@@ -65,6 +69,8 @@ function seatBookingControl(event) {
     createElement(position);
     totalCount();
     disableCouponBtn();
+  } else {
+    alert('You already selected "4"  Seat');
   }
 }
 
