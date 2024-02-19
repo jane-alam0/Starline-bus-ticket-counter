@@ -45,17 +45,19 @@ applyBtn.addEventListener("click", function (event) {
   let gradnTotal = getElementInnerTextValue("gradnTotal");
   const inputFild = getElement("couponInput");
   const inputValue = inputFild.value;
-  const convertArr = inputValue.split(" ").join("").toLowerCase();
+  const convertArr = inputValue.split(" ").join("");
   const coupleDis = gradnTotal * 0.2;
   const new12Dis = gradnTotal * 0.15;
 
-  if (convertArr === "new15") {
+  if (convertArr === "NEW15") {
     gradnTotal = gradnTotal - new12Dis;
     setInnerText("gradnTotal", gradnTotal);
+    getElement("discountId").innerText = new12Dis;
     element.remove();
-  } else if (convertArr === "couple20") {
+  } else if (convertArr === "Couple20") {
     gradnTotal = gradnTotal - coupleDis;
     setInnerText("gradnTotal", gradnTotal);
+    getElement("discountId").innerText = coupleDis;
     element.remove();
   } else {
     inputFild.value = " ";
