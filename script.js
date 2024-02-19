@@ -48,15 +48,18 @@ applyBtn.addEventListener("click", function (event) {
   const convertArr = inputValue.split(" ").join("");
   const coupleDis = gradnTotal * 0.2;
   const new12Dis = gradnTotal * 0.15;
+  const discount = getElement("discountTag");
 
   if (convertArr === "NEW15") {
     gradnTotal = gradnTotal - new12Dis;
     setInnerText("gradnTotal", gradnTotal);
+    discount.classList.remove("hidden");
     getElement("discountId").innerText = new12Dis;
     element.remove();
   } else if (convertArr === "Couple20") {
     gradnTotal = gradnTotal - coupleDis;
     setInnerText("gradnTotal", gradnTotal);
+    discount.classList.remove("hidden");
     getElement("discountId").innerText = coupleDis;
     element.remove();
   } else {
