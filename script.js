@@ -19,7 +19,7 @@ function seatBookingControl(event) {
     setInnerText("maxSeat", countSeat);
     const sub = totalSeat + 1;
     setInnerText("totalSeat", sub);
-    removeElement(".removeDiv");
+    removeElement("seatClass");
   } else {
     if (maxSeat < 4) {
       this.classList.add("bg-green-500");
@@ -168,9 +168,10 @@ function getElementInnerTextValue(elementId) {
   return convert;
 }
 // remove element
-function removeElement(rmclass) {
-  const element = document.querySelector(rmclass);
-  element.remove();
+function removeElement(elementId) {
+  const element = document.getElementById(elementId);
+  const lastChildElement = element.lastChild;
+  element.removeChild(lastChildElement);
 }
 
 // set innerText
