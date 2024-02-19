@@ -71,10 +71,10 @@
       <div
         class="container flex flex-col justify-center items-center space-y-10 mt-9 min-h-[550px] bg-[url('images/banner.png')] bg-no-repeat bg-center bg-cover rounded-2xl text-center"
       >
-        <h1 class="text-6xl font-extrabold text-white">
+        <h1 class="text-4xl lg:text-6xl font-extrabold text-white">
           End-to-End Travel with
         </h1>
-        <h1 class="text-6xl font-extrabold text-green-500">
+        <h1 class="text-4xl lg:text-6xl font-extrabold text-green-500">
           Starline Paribahan
         </h1>
         <p class="inter text-lg text-gray-100 lg:w-[50%] mx-auto">
@@ -311,294 +311,219 @@
         <section
           class="container flex flex-col lg:flex-row gap-5 mx-auto p-5 bg-white rounded-xl mt-24"
         >
-          <div class="">
-            <h2 class="text-2xl font-semibold black">Select Your Seat</h2>
-            <hr class="border-dashed border-1 border-gray-400 my-5" />
+          <div class="flex flex-col w-full lg:w-[65%]">
+            <div>
+              <h2 class="text-2xl font-semibold black">Select Your Seat</h2>
+              <hr class="border-dashed border-1 border-gray-400 my-5" />
 
-            <div class="flex justify-between items-center">
-              <p class="flex text-lg font-medium text-gray-400">
-                <img
-                  class="border-dashed border-2 border-gray-300"
-                  src="images/seat-gray.png"
-                  alt=""
-                />
-                &nbsp; Available
-              </p>
-              <p class="flex text-lg font-medium text-green-500">
-                <img
-                  class="border-dashed border-2 border-gray-300"
-                  src="images/seat-green-filled.png"
-                  alt=""
-                />
-                &nbsp; selected
-              </p>
-            </div>
-            <hr class="border-dashed border-1 border-gray-400 my-5" />
-            <div class="flex justify-end">
-              <p class="bg-gray-300 text-center px-7 lg:px-16 rounded-lg py-3">
-                <svg
-                  width="26.000000"
-                  height="26.000000"
-                  viewBox="0 0 26 26"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <desc>Created with Pixso.</desc>
-                  <defs />
-                  <path
-                    id="Vector"
-                    d="M1.91333 17.5922C2.5166 19.0481 3.40039 20.371 4.51465 21.4853C5.62891 22.5996 6.9519 23.4835 8.40771 24.0865C9.86377 24.6896 11.4241 25 13 25C14.5759 25 16.1362 24.6896 17.5923 24.0865C19.0481 23.4835 20.3711 22.5996 21.4854 21.4853C22.5996 20.371 23.4834 19.0481 24.0867 17.5922C24.6897 16.1363 25 14.5759 25 13C25 11.4241 24.6897 9.86371 24.0867 8.40781C23.4834 6.9519 22.5996 5.62903 21.4854 4.51471C20.3711 3.40042 19.0481 2.51651 17.5923 1.91345C16.1362 1.31039 14.5759 1 13 1C11.4241 1 9.86377 1.31039 8.40771 1.91345C6.9519 2.51651 5.62891 3.40042 4.51465 4.51471C3.40039 5.62903 2.5166 6.9519 1.91333 8.40781C1.3103 9.86371 1 11.4241 1 13C1 14.5759 1.3103 16.1363 1.91333 17.5922ZM11.1145 14.8856C11.6145 15.3857 12.2927 15.6667 13 15.6667C13.7073 15.6667 14.3855 15.3857 14.8855 14.8856C15.3857 14.3855 15.6667 13.7072 15.6667 13C15.6667 12.2928 15.3857 11.6145 14.8855 11.1144C14.3855 10.6143 13.7073 10.3333 13 10.3333C12.2927 10.3333 11.6145 10.6143 11.1145 11.1144C10.6143 11.6145 10.3333 12.2928 10.3333 13C10.3333 13.7072 10.6143 14.3855 11.1145 14.8856ZM13 15.6667L13 25M10.3333 13L1.33325 10.3333M15.6667 13L24.6667 10.3333"
-                    stroke="#030712"
-                    stroke-opacity="0.700000"
-                    stroke-width="2.000000"
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
+              <div class="flex justify-between items-center">
+                <p class="flex text-lg font-medium text-gray-400">
+                  <img
+                    class="border-dashed border-2 border-gray-300"
+                    src="images/seat-gray.png"
+                    alt=""
                   />
-                </svg>
-              </p>
+                  &nbsp; Available
+                </p>
+                <p class="flex text-lg font-medium text-green-500">
+                  <img
+                    class="border-dashed border-2 border-gray-300"
+                    src="images/seat-green-filled.png"
+                    alt=""
+                  />
+                  &nbsp; selected
+                </p>
+              </div>
+              <hr class="border-dashed border-1 border-gray-400 my-5" />
+              <div class="flex justify-end">
+                <p
+                  class="bg-gray-300 text-center px-7 lg:px-16 rounded-lg py-3"
+                >
+                  <svg
+                    width="26.000000"
+                    height="26.000000"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <desc>Created with Pixso.</desc>
+                    <defs />
+                    <path
+                      id="Vector"
+                      d="M1.91333 17.5922C2.5166 19.0481 3.40039 20.371 4.51465 21.4853C5.62891 22.5996 6.9519 23.4835 8.40771 24.0865C9.86377 24.6896 11.4241 25 13 25C14.5759 25 16.1362 24.6896 17.5923 24.0865C19.0481 23.4835 20.3711 22.5996 21.4854 21.4853C22.5996 20.371 23.4834 19.0481 24.0867 17.5922C24.6897 16.1363 25 14.5759 25 13C25 11.4241 24.6897 9.86371 24.0867 8.40781C23.4834 6.9519 22.5996 5.62903 21.4854 4.51471C20.3711 3.40042 19.0481 2.51651 17.5923 1.91345C16.1362 1.31039 14.5759 1 13 1C11.4241 1 9.86377 1.31039 8.40771 1.91345C6.9519 2.51651 5.62891 3.40042 4.51465 4.51471C3.40039 5.62903 2.5166 6.9519 1.91333 8.40781C1.3103 9.86371 1 11.4241 1 13C1 14.5759 1.3103 16.1363 1.91333 17.5922ZM11.1145 14.8856C11.6145 15.3857 12.2927 15.6667 13 15.6667C13.7073 15.6667 14.3855 15.3857 14.8855 14.8856C15.3857 14.3855 15.6667 13.7072 15.6667 13C15.6667 12.2928 15.3857 11.6145 14.8855 11.1144C14.3855 10.6143 13.7073 10.3333 13 10.3333C12.2927 10.3333 11.6145 10.6143 11.1145 11.1144C10.6143 11.6145 10.3333 12.2928 10.3333 13C10.3333 13.7072 10.6143 14.3855 11.1145 14.8856ZM13 15.6667L13 25M10.3333 13L1.33325 10.3333M15.6667 13L24.6667 10.3333"
+                      stroke="#030712"
+                      stroke-opacity="0.700000"
+                      stroke-width="2.000000"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </p>
+              </div>
             </div>
-
-            <div class="flex inter justify-between mt-5">
-              <div class="flex flex-col text-lg justify-between items-center">
-                <p class="text-center mr-3 py-3">A</p>
-                <p class="text-center mr-3 py-3">B</p>
-                <p class="text-center mr-3 py-3">C</p>
-                <p class="text-center mr-3 py-3">D</p>
-                <p class="text-center mr-3 py-3">E</p>
-                <p class="text-center mr-3 py-3">F</p>
-                <p class="text-center mr-3 py-3">G</p>
-                <p class="text-center mr-3 py-3">H</p>
-                <p class="text-center mr-3 py-3">I</p>
-                <p class="text-center mr-3 py-3">J</p>
+            <div class="grid grid-cols-12 mt-5">
+              <div
+                class="flex flex-col justify-between items-center mt-1 col-span-1 text-xl font-medium gap-5"
+              >
+                <p>A</p>
+                <p>B</p>
+                <p>C</p>
+                <p>D</p>
+                <p>E</p>
+                <p>F</p>
+                <p>G</p>
+                <p>H</p>
+                <p>I</p>
+                <p>J</p>
               </div>
               <div
-                class="flex gap-4 md:gap-12 lg:gap-12 justify-center items-center"
+                class="grid grid-cols-2 text-lg font-medium text-gray-600 gap-5 lg:gap-12 col-span-11"
               >
-                <div class="flex gap-2 lg:gap-6 justify-center items-center">
-                  <div class="flex flex-col gap-2 lg:gap-5">
-                    <p
-                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
-                    >
-                      A1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      B1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      C1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      D1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      E1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      F1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      G1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      H1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      I1
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      J1
-                    </p>
-                  </div>
+                <div class="grid grid-cols-2 inter gap-3">
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    A1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    A2
+                  </button>
 
-                  <div class="flex flex-col gap-2 lg:gap-5">
-                    <p
-                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
-                    >
-                      A2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      B2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      C2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      D2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      E2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      F2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      G2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      H2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      I2
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      J2
-                    </p>
-                  </div>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    B1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    B2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    C1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    C2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    D1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    D2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    E1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    E2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    F1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    F2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    G1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    G2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    H1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    H2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    I1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    I2
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    J1
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    J2
+                  </button>
                 </div>
 
-                <div class="flex gap-2 lg:gap-5 justify-center items-center">
-                  <div class="flex flex-col gap-2 lg:gap-5">
-                    <p
-                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
-                    >
-                      A3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      B3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      C3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      D3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      E3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      F3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      G3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      H3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      I3
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      J3
-                    </p>
-                  </div>
+                <div class="grid grid-cols-2 inter gap-3">
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    A3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    A4
+                  </button>
 
-                  <div class="flex flex-col gap-2 lg:gap-5">
-                    <p
-                      class="bttn bg-gray-100 text-center px-7 lg:px-16 rounded-lg py-3"
-                    >
-                      A4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      B4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      C4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      D4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      E4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      F4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      G4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      H4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      I4
-                    </p>
-                    <p
-                      class="bttn bg-gray-100 text-center lg:px-16 rounded-lg py-3"
-                    >
-                      J4
-                    </p>
-                  </div>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    C3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    C3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    D3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    D4
+                  </button>
+
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    E3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    E4
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    F3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    F4
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    F3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    F4
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    G3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    G4
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    H3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    H4
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    I3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    I4
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    J3
+                  </button>
+                  <button class="bttn rounded-lg p-3 w-full bg-gray-100">
+                    J4
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-
           <div
             class="hidden lg:block border-dashed border-r-2 border-green-500"
           ></div>
 
-          <div class="w-full">
+          <div class="w-full lg:w-[35%]">
             <h2 class="text-2xl font-semibold black">Select Your Seat</h2>
             <hr class="border-dashed border-1 border-gray-400 my-5" />
             <div class="bg-[#F7F8F8] p-6 rounded-xl">

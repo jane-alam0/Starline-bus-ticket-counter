@@ -57,6 +57,7 @@ function seatBookingControl(event) {
   const totalSeat = getElementInnerTextValue("totalSeat");
   if (maxSeat < 4) {
     let countSeat = maxSeat + 1;
+    disableFunction(findSeat);
     setBackgroundColor(findSeat);
     setInnerText("maxSeat", countSeat);
     const sub = totalSeat - 1;
