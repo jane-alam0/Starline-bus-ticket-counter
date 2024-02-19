@@ -20,6 +20,7 @@ function seatBookingControl(event) {
     const sub = totalSeat + 1;
     setInnerText("totalSeat", sub);
     removeElement("seatClass");
+    subCount();
   } else {
     if (maxSeat < 4) {
       this.classList.add("bg-green-500");
@@ -90,6 +91,14 @@ function totalCount() {
   const ticketPrice = 550;
   const total = getElementInnerTextValue("total-price");
   const totalPrice = total + ticketPrice;
+  setInnerText("total-price", totalPrice);
+  setInnerText("gradnTotal", totalPrice);
+}
+
+function subCount() {
+  const ticketPrice = 550;
+  const total = getElementInnerTextValue("total-price");
+  const totalPrice = total - ticketPrice;
   setInnerText("total-price", totalPrice);
   setInnerText("gradnTotal", totalPrice);
 }
