@@ -4,15 +4,47 @@ for (const btn of seatBookingBtn) {
   btn.addEventListener("click", seatBookingControl);
 }
 
+function seatBookingControl(event) {
+  const findSeat = event.target;
+  const position = event.target.innerText;
+
+  const maxSeat = getElementInnerTextValue("maxSeat");
+  const totalSeat = getElementInnerTextValue("totalSeat");
+
+  // let isSelected = false;
+  if (this.classList.contains("bg-green-500")) {
+    anabelFunction(findSeat);
+    this.classList.remove("bg-green-500");
+    let countSeat = maxSeat - 1;
+    setInnerText("maxSeat", countSeat);
+    const sub = totalSeat + 1;
+    setInnerText("totalSeat", sub);
+    removeElement(".removeDiv");
+  } else {
+    if (maxSeat < 4) {
+      this.classList.add("bg-green-500");
+      let countSeat = maxSeat + 1;
+      setInnerText("maxSeat", countSeat);
+      totalCount();
+      // disableFunction(findSeat);
+      const sub = totalSeat - 1;
+      setInnerText("totalSeat", sub);
+      createElement(position);
+      disableCouponBtn();
+    } else {
+      alert('You already selected "4"  Seat');
+    }
+  }
+}
+
 //coupon code apply
 const applyBtn = getElement("applyBtn");
 applyBtn.addEventListener("click", function (event) {
   const element = event.target.parentNode;
-  console.log(element);
   let gradnTotal = getElementInnerTextValue("gradnTotal");
-  const inputFild = getElement("couponInput").value;
-  const convertArr = inputFild.split(" ").join("").toLowerCase();
-
+  const inputFild = getElement("couponInput");
+  const inputValue = inputFild.value;
+  const convertArr = inputValue.split(" ").join("").toLowerCase();
   const coupleDis = gradnTotal * 0.2;
   const new12Dis = gradnTotal * 0.15;
 
@@ -25,6 +57,7 @@ applyBtn.addEventListener("click", function (event) {
     setInnerText("gradnTotal", gradnTotal);
     element.remove();
   } else {
+    inputFild.value = " ";
     alert("Coupon code not mach !!! plz write caret coupon");
   }
 });
@@ -53,27 +86,6 @@ newPageLode(nextBtn, "index2.html");
 const goHome = getElement("continue");
 newPageLode(goHome, "index.html");
 
-function seatBookingControl(event) {
-  const findSeat = event.target;
-  const position = event.target.innerText;
-
-  const maxSeat = getElementInnerTextValue("maxSeat");
-  const totalSeat = getElementInnerTextValue("totalSeat");
-  if (maxSeat < 4) {
-    let countSeat = maxSeat + 1;
-    disableFunction(findSeat);
-    setBackgroundColor(findSeat);
-    setInnerText("maxSeat", countSeat);
-    const sub = totalSeat - 1;
-    setInnerText("totalSeat", sub);
-    createElement(position);
-    totalCount();
-    disableCouponBtn();
-  } else {
-    alert('You already selected "4"  Seat');
-  }
-}
-
 function totalCount() {
   const ticketPrice = 550;
   const total = getElementInnerTextValue("total-price");
@@ -91,7 +103,13 @@ function createElement(position) {
   seatPosition.textContent = position;
   Class.textContent = "Economoy";
   price.textContent = "550";
-  div.classList.add("flex", "justify-between", "items-center", "mt-4");
+  div.classList.add(
+    "flex",
+    "removeDiv",
+    "justify-between",
+    "items-center",
+    "mt-4"
+  );
   div.appendChild(seatPosition);
   div.appendChild(Class);
   div.appendChild(price);
@@ -110,6 +128,10 @@ function disableCouponBtn() {
 
 function disableFunction(element) {
   element.setAttribute("disabled", true);
+}
+
+function anabelFunction(element) {
+  element.removeAttribute("disabled");
 }
 
 // utility funtion section=====================================================
@@ -144,6 +166,11 @@ function getElementInnerTextValue(elementId) {
   const element = document.getElementById(elementId).innerText;
   const convert = parseInt(element);
   return convert;
+}
+// remove element
+function removeElement(rmclass) {
+  const element = document.querySelector(rmclass);
+  element.remove();
 }
 
 // set innerText
