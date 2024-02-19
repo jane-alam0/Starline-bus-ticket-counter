@@ -211,7 +211,7 @@
 
       <section
         id="seat-section"
-        class="bg-[#F7F8F8] mt-28 rounded-[88px] border-t-2 border-green-500"
+        class="bg-[#F7F8F8] mt-28 pb-16 rounded-t-[88px] border-t-2 border-green-500"
       >
         <h1 class="font-bold text-4xl mt-24 text-center">Starline Paribahan</h1>
         <p
@@ -615,9 +615,7 @@
                 <p>Price</p>
               </div>
               <hr class="border-dashed border-1 border-gray-400 my-5" />
-              <div
-                class="text-lg text-gray-500 flex justify-between items-center"
-              ></div>
+              <div id="seatClass" class="text-lg text-gray-500 inter"></div>
               <hr class="border-1 border-gray-400 my-5" />
               <div
                 class="text-lg font-semibold inter text-black flex justify-between items-center"
@@ -629,12 +627,15 @@
                 class="text-lg inter bg-white flex justify-between items-center my-5 rounded-xl"
               >
                 <input
-                  class="w-full h-full p-4"
-                  type="text"
+                  id="couponInput"
+                  class="w-full h-full p-5"
                   placeholder="Have any coupons?"
+                  type="text"
                 />
                 <button
-                  class="text-white bg-green-400 font-semibold text-lg px-4 py-2 rounded-lg m-4"
+                  id="applyBtn"
+                  disabled
+                  class="text-white bg-green-200 font-semibold text-lg px-4 py-2 rounded-lg m-4"
                 >
                   Apply
                 </button>
@@ -643,7 +644,7 @@
                 class="text-lg font-semibold inter text-black flex justify-between items-center"
               >
                 <p>Grand Total</p>
-                <p>BDT <span> 0</span></p>
+                <p>BDT <span id="gradnTotal"> 0</span></p>
               </div>
             </div>
             <div class="text-lg font-semibold inter text-black mt-7">
@@ -658,10 +659,11 @@
               <p class="mb-5 mt-5">Phone Number*</p>
 
               <input
+                id="numberInput"
                 class="w-full h-full border-1 border border-gray-400 rounded-lg p-5"
                 placeholder="Enter your phone number"
                 type="number"
-                min="11"
+                max="11"
               />
 
               <p class="mb-5 mt-5">Email ID</p>
@@ -673,7 +675,9 @@
               />
 
               <button
-                class="font-extrabold text-xl text-white w-full rounded-xl bg-green-500 p-5 my-5"
+                id="nextBtn"
+                disabled
+                class="font-extrabold text-xl text-white w-full rounded-xl bg-green-200 p-5 my-5"
               >
                 Next
               </button>
@@ -691,7 +695,45 @@
     </main>
     <!-- main section ends here  -->
     <!-- footer section starts here  -->
-    <footer></footer>
+    <footer class="-mt-16">
+      <div class="container mx-auto px-8 md:px-24 bg-black text-white py-20">
+        <div class="flex flex-col lg:flex-row gap-2 justify-between">
+          <div class="w-full lg:w-[48%]">
+            <h2 class="text-3xl font-bold">P-Ticket</h2>
+            <p>
+              Starline is a digital platform to make your daily commuting
+              better.
+            </p>
+            <p>@all rights reserved, Starline services limited.2024</p>
+          </div>
+          <div
+            class="w-full lg:w-[48%] flex flex-col items-start lg:items-end space-y-2"
+          >
+            <p>Download our app</p>
+            <div
+              class="flex items-center gap-2 p-2 border-2 border-gray-400 rounded-lg"
+            >
+              <img src="./images/playstore.png" alt="" />
+              <div>
+                <small>GET IT ON</small>
+                <p class="text-xl">Goolgle play</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border border-dashed my-4"></div>
+        <div class="flex flex-col lg:flex-row mt-5 lg:justify-between">
+          <div>
+            <small>@all rights reserved, P-Ticket services limited.2024</small>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-5">
+            <small>Terms & condition</small>
+            <small>Return & refund policy</small>
+            <small>Privacy policy</small>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- footer section ends here  -->
     <script src="script.js"></script>
   </body>

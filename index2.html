@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/bus-icon.png" type="image/x-icon" />
+    <title>Starline bus online ticket counter</title>
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind Css cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "#1DD100",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="inter bg-gray-100 min-h-screen scroll-smooth flex justify-center items-center"
+  >
+    <section
+      class="flex bg-white justify-center p-5 lg:p-16 rounded-xl space-y-7 flex-col items-center"
+    >
+      <p><img src="images/success.png" alt="" /></p>
+      <h3 class="text-2xl font-bold my-5 text-green-500">SUCCESS</h3>
+      <p class="lg:w-[70%] mx-auto text-xl font-medium text-black text-center">
+        Thank you for Booking Our Bus Seats. We are working hard to find the
+        best service and deals for you.
+      </p>
+      <p
+        class="lg:w-[70%] mx-auto text-xl font-medium text-gray-500 text-center"
+      >
+        Shortly you will find a confirmation in your email.
+      </p>
+      <button
+        id="continue"
+        class="text-xl font-bold text-white bg-green-500 rounded-xl px-8 py-3"
+      >
+        Continue
+      </button>
+    </section>
+    <script>
+      // return Home screen, click continue button
+      const continueBtn = document.getElementById("continue");
+      continueBtn.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
